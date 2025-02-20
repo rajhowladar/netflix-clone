@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="try.css">
+
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="myVideo">
+            <source src="trailer.mp4" type="video/mp4">
+
+        </video>
+      <div class="content">
+        <h1>Heading </h1>
+        <p>lorem ipsum</p>
+        <button id="myBtn" oneclick="myFunction()">Pause</button>
+      </div>
+        
+    </div>
+    
+</body>
+</html>
